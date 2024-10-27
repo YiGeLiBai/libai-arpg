@@ -16,6 +16,7 @@ public partial class KillZone : Area2D
 	{
 		GD.Print("You Died!");
 		Engine.TimeScale = 0.5f;
+		body.GetNode<CollisionShape2D>("CollisionShape2D").QueueFree();
 		timer.Start();
 	}
 
